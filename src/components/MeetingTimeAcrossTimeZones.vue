@@ -123,7 +123,7 @@ watch(localTimeZoneIdentifier, (newLocalTimeZoneIdentifier) => {
 const prettifyTimeZoneIdentifier = timeZoneIdentifier => {
   if (timeZoneIdentifier.includes("/")) {
     const parts = timeZoneIdentifier.split("/");
-    const prettified = parts[parts.length - 1].replace("_", " ");
+    const prettified = parts[parts.length - 1].replaceAll("_", " ");
     return prettified;
   }
   return timeZoneIdentifier;

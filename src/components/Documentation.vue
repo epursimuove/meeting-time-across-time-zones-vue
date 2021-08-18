@@ -83,7 +83,7 @@
   <h2>Daylight saving time</h2>
 
   <p>
-    When daylight saving time is used for a time zone, it is indicated with a &starf; symbol. If the date currently displayed is the actual date for DST transition a &starf;! is used (and the local time slots will probably look strange, either they miss a value, at "spring forward", or they will contain duplicates, at "fall back").
+    When daylight saving time is used for a time zone, it is indicated with a "&starf;" symbol. If the date currently displayed is the actual date for DST transition a "&starf;!" is used (and the local time slots will probably look strange, either they miss a value, at "spring forward", or they will contain duplicates, at "fall back").
   </p>
 
 
@@ -95,7 +95,7 @@
   </p>
 
   <p>
-    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (version <var>2.0.1</var>) was used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
+    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (version <var>2.0.2</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
   </p>
 
   <p>
@@ -105,6 +105,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.0.1</var>, released 2021-08-18.
+    </li>
     <li>
       Version <var>1.0.0</var>, released 2021-07-29.
     </li>
