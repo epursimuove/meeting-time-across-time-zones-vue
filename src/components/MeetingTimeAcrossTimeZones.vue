@@ -39,7 +39,7 @@
 
 <script setup>
 import Table from "./Table.vue";
-import {DateTime} from "luxon";
+import {DateTime, Settings} from "luxon";
 import {computed, ref, watch} from "vue";
 import Footer from "./Footer.vue";
 import Summary from "./Summary.vue";
@@ -50,6 +50,8 @@ import {
   timeZoneAreaLocationIdentifiers,
   exampleSubsetOfTimeZoneAreaLocationIdentifiers
 } from "../timeZones.js";
+
+Settings.defaultLocale = "en-GB";
 
 const useManyTimeZones = true;
 

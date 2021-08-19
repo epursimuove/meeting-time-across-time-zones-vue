@@ -83,7 +83,18 @@
   <h2>Daylight saving time</h2>
 
   <p>
-    When daylight saving time is used for a time zone, it is indicated with a "&starf;" symbol. If the date currently displayed is the actual date for DST transition a "&starf;!" is used (and the local time slots will probably look strange, either they miss a value, at "spring forward", or they will contain duplicates, at "fall back").
+    When <em>daylight saving time</em> (DST) is currently used for a time zone, it is indicated with a "&starf;" symbol.
+  </p>
+
+
+  <h3>DST switches</h3>
+
+  <p>
+    If the date displayed contains an actual DST transition, a blinking "&starf;!" is used as warning. The local time slots will probably look strange, either they miss a value, at "spring forward", or they will contain duplicates, at "fall back". The offset will of course also change at some (random) point during this date.
+  </p>
+
+  <p class="note">
+    Note: If you have an eye for details, you will also notice that you will not be able to select hour 23 under some circumstances, but I will leave that problem as an exercise for you to think about and as a reminder of the <a href="https://anders.nemonisimors.com/timeZones.php#daylight-saving-time">DST craziness</a>.
   </p>
 
 
@@ -105,6 +116,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.0.2</var>, released 2021-08-19.
+    </li>
     <li>
       Version <var>1.0.1</var>, released 2021-08-18.
     </li>
@@ -156,7 +170,7 @@
   <h2>Disclaimer</h2>
 
   <p>
-    Since we are handling (future) times, dates, time zones, daylight saving times, etc, there may be <a href="https://anders.nemonisimors.com/timeZones.php">confusion and errors</a> involved. In particular, we have the problem that solar noon and noon may be many hours apart in some time zones, the problem with holidays in a particular time zone, local times not fixed to the timeline, areas using offsets of 30 or 45 minutes and complex edge cases. Therefore, no guarantees are promised and no liabilities for errors.
+    Since we are handling (future) times, dates, time zones, daylight saving times, etc, there may be <a href="https://anders.nemonisimors.com/timeZones.php">confusion and errors</a> involved. In particular, we have the problem that solar noon and noon may be many hours apart in some time zones, the problem with holidays in a particular time zone, local times not fixed to the timeline, areas using offsets of 30 or 45 minutes, the problem with DST switches and other complex edge cases. Therefore, no guarantees are promised and no liabilities for errors.
   </p>
 
 </template>

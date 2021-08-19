@@ -112,6 +112,11 @@ a:hover {
   cursor: default;
 }
 
+.note {
+  color: #888;
+  font-size: 0.9em;
+}
+
 @media screen and (min-width: 700px) {
   body {
     margin: 0 1em;
