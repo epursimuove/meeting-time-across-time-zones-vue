@@ -38,9 +38,10 @@ const offsetInformation = computed(() => {
 
   const dstIndicator = dstChangeWillOccur.value ? " &starf;!" : dstAtStart.value ? " &starf;" : "";
   // console.log('startTimeForCurrentTimeZone', props.timeZone.prettyId, startTimeForCurrentTimeZone);
-  const offsetString = startTimeForCurrentTimeZone.zoneName === "UTC" ? "" : startTimeForCurrentTimeZone.toISO().slice(-6);
+  const offsetString = startTimeForCurrentTimeZone.zoneName === "UTC" ? "Z" : startTimeForCurrentTimeZone.toISO().slice(-6);
 
-  return `UTC${offsetString}${dstIndicator}`;
+  // return `UTC${offsetString}${dstIndicator}`;
+  return `${offsetString}${dstIndicator}`;
 });
 
 </script>

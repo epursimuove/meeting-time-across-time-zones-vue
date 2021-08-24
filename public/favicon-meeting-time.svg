@@ -1,0 +1,83 @@
+<svg width="512"
+     height="512"
+     xmlns="http://www.w3.org/2000/svg">
+
+
+    <!-- First row -->
+    <rect x="16"
+          y="16"
+          width="160"
+          height="160"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="176"
+          y="16"
+          width="160"
+          height="160"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="336"
+          y="16"
+          width="160"
+          height="160"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+
+    <!-- Second row -->
+    <rect x="16"
+          y="176"
+          width="160"
+          height="160"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="176"
+          y="176"
+          width="160"
+          height="160"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="336"
+          y="176"
+          width="160"
+          height="160"
+          fill="green"
+          stroke-width="0"
+    />
+
+
+    <!-- Third row -->
+    <rect x="16"
+          y="336"
+          width="160"
+          height="160"
+          fill="red"
+          stroke-width="0"
+    />
+
+    <rect x="176"
+          y="336"
+          width="160"
+          height="160"
+          fill="red"
+          stroke-width="0"
+    />
+
+    <rect x="336"
+          y="336"
+          width="160"
+          height="160"
+          fill="orange"
+          stroke-width="0"
+    />
+
+</svg>

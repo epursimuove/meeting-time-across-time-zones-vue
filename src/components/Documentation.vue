@@ -117,6 +117,9 @@
 
   <ul>
     <li>
+      Version <var>1.0.3</var>, released 2021-08-21.
+    </li>
+    <li>
       Version <var>1.0.2</var>, released 2021-08-19.
     </li>
     <li>

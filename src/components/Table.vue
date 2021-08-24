@@ -15,9 +15,13 @@
       <table>
         <tbody>
 
-        <tr v-for="timeZone in timeZones"
+        <tr v-for="(timeZone, index) in timeZones"
             :key="timeZone.id"
             :class="{'utc-time-zone': timeZone.id === 'UTC', 'current-local-time-zone': timeZone.id === currentLocalTimeZoneIdentifier}">
+
+          <td class="row-number">
+            {{ index + 1 }}
+          </td>
 
           <TableHeader :timeZone="timeZone" />
 
@@ -116,6 +120,12 @@ const setHoveringValuesForColumn = (column, value) => {
 .current-local-date-info {
   font-family: Courier, monospace;
   font-size: 1.0em;
+}
+
+.row-number {
+  color: #aaa;
+  font-size: 0.8em;
+  padding-left: 1em;
 }
 
 @media screen and (min-width: 700px) {
