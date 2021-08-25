@@ -99,6 +99,23 @@
 
 
 
+  <h2>Convenience link</h2>
+
+  <p>
+    The current configuration creates a dynamic convenience link. You can bookmark this for easy access to the values for time zones that you most often use.
+  </p>
+
+  <p>
+    For example, the following shows Perth, London and Los Angeles, with Perth as selected local time zone:
+  </p>
+
+  <a href="https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth">
+    <code>
+      https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth
+    </code>
+  </a>
+
+
   <h2>About</h2>
 
   <p>
@@ -117,14 +134,17 @@
 
   <ul>
     <li>
-      Version <var>1.0.3</var>, released 2021-08-21.
+      Version <var>1.1.0</var>, released 2021-08-25.
     </li>
-    <li>
-      Version <var>1.0.2</var>, released 2021-08-19.
-    </li>
-    <li>
-      Version <var>1.0.1</var>, released 2021-08-18.
-    </li>
+<!--    <li>-->
+<!--      Version <var>1.0.3</var>, released 2021-08-21.-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      Version <var>1.0.2</var>, released 2021-08-19.-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      Version <var>1.0.1</var>, released 2021-08-18.-->
+<!--    </li>-->
     <li>
       Version <var>1.0.0</var>, released 2021-07-29.
     </li>

@@ -4,11 +4,11 @@
 
   <div class="meeting-time-across-time-zones">
 
-    <div class="current-local-date-info">
+    <p class="current-local-date-info">
       {{ startTime.toFormat("ccc d MMMM yyyy z ('UTC'ZZ)") }}
 <!--      {{currentLocalDate }}-->
 <!--      {{ currentLocalTimeZoneIdentifier }}-->
-    </div>
+    </p>
 
     <div class="decision-table">
 

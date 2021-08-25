@@ -1,6 +1,9 @@
 <template>
 
   <header>
+    <a href="./">
+      <img src="/favicon-meeting-time.svg" alt="Home" width="32" height="32" />
+    </a>
     NNM Meeting time across time zones
     <small><var>{{ appVersion }}</var></small>
   </header>
@@ -15,6 +18,12 @@
 <!--  {{ startTime.toISO() }}-->
 
   <h1>Meeting time across {{ actualTimeZones.length }} time zones</h1>
+
+  <p>
+    <a :href="convenienceLink">
+      Convenience link
+    </a>
+  </p>
 
   <Table :timeZones="actualTimeZones"
          :currentLocalDate="localDate"
@@ -40,7 +49,7 @@
 <script setup>
 import Table from "./Table.vue";
 import {DateTime, Settings} from "luxon";
-import {computed, ref, watch} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 import Footer from "./Footer.vue";
 import Summary from "./Summary.vue";
 import Documentation from "./Documentation.vue";
@@ -65,7 +74,7 @@ const timeZones = useManyTimeZones ?
     timeZoneAreaLocationIdentifiers.map(wrapWithId) :
     exampleSubsetOfTimeZoneAreaLocationIdentifiers.map(wrapWithId);
 
-const startingTimeZones = [
+const defaultTimeZones = [
   "UTC",
   "Europe/London",
   "Europe/Helsinki",
@@ -75,14 +84,13 @@ const startingTimeZones = [
   "Australia/Perth",
 ];
 
-
 const now = DateTime.now()
     .plus({days: 1})
 // .setZone(localTimeZoneIdentifier.value);
 // const startTime = now.startOf("day");
 
-const localTimeZoneIdentifier = ref(now.zoneName);
-const additionalTimeZoneIdentifiers = ref([...startingTimeZones, now.zoneName]);
+const localTimeZoneIdentifier = ref(null);
+const additionalTimeZoneIdentifiers = ref([]);
 const localDate = ref(now.toISODate());
 
 const startTime = computed(() => DateTime
@@ -121,6 +129,58 @@ watch(localTimeZoneIdentifier, (newLocalTimeZoneIdentifier) => {
     additionalTimeZoneIdentifiers.value.push(newLocalTimeZoneIdentifier);
   }
 });
+
+const convenienceLink = computed(() => {
+  const url = location.origin + location.pathname;
+  const tzLocal = `tzLocal=${localTimeZoneIdentifier.value}`;
+  const tz = additionalTimeZoneIdentifiers.value.map(tzId => `tz=${tzId}`);
+
+  const queryParameters = `?${[tzLocal, ...tz].join("&")}`;
+
+  return `${url}${queryParameters}`;
+});
+
+const getQueryParameters = queryString => {
+  const result = {
+    tzLocal: null,
+    tz: []
+  };
+
+  queryString
+      .slice(1)
+      .split("&")
+      .forEach(parameter => {
+        const [name, value] = parameter.split("=");
+        if (name === "tzLocal") {
+          result[name] = value;
+        } else if (name === "tz") {
+          result[name].push(value);
+        }
+      });
+
+  return result;
+};
+
+onMounted(() => {
+  // console.log('onMounted');
+
+  const queryParameters = getQueryParameters(location.search);
+
+  const localTimeZoneIdentifierFromUser = queryParameters.tzLocal;
+  const additionalTimeZoneIdentifiersFromUser = queryParameters.tz;
+
+  if (localTimeZoneIdentifierFromUser) {
+    localTimeZoneIdentifier.value = localTimeZoneIdentifierFromUser;
+  } else {
+    localTimeZoneIdentifier.value = now.zoneName;
+  }
+
+  if (additionalTimeZoneIdentifiersFromUser.length > 0) {
+    additionalTimeZoneIdentifiers.value = additionalTimeZoneIdentifiersFromUser;
+  } else {
+    additionalTimeZoneIdentifiers.value = [...defaultTimeZones, now.zoneName];
+  }
+})
 
 const prettifyTimeZoneIdentifier = timeZoneIdentifier => {
   if (timeZoneIdentifier.includes("/")) {
