@@ -7,7 +7,7 @@
   </p>
 
   <p>
-    This colorful tool will help you understand many of these uncertainties.
+    This colorful tool will help you understand and visualize many of these uncertainties.
   </p>
 
   <p>
@@ -102,16 +102,30 @@
   <h2>Convenience link</h2>
 
   <p>
-    The current configuration creates a dynamic convenience link. You can bookmark this for easy access to the values for time zones that you most often use.
+    The current configuration creates a dynamic link for your convenience. You can bookmark this link for easy access to the values for time zones that you most often use.
   </p>
 
   <p>
-    For example, the following shows Perth, London and Los Angeles, with Perth as selected local time zone:
+    Here are some examples.
+  </p>
+
+  <p>
+    The following shows Perth, London and Los Angeles, with Perth as selected local time zone:
   </p>
 
   <a href="https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth">
     <code>
       https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth
+    </code>
+  </a>
+
+  <p>
+    The following shows London, Stockholm and Helsinki, with UTC as selected local time zone:
+  </p>
+
+  <a href="https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=UTC&tz=Europe/London&tz=Europe/Stockholm&tz=Europe/Helsinki">
+    <code>
+      https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=UTC&tz=Europe/London&tz=Europe/Stockholm&tz=Europe/Helsinki
     </code>
   </a>
 

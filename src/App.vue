@@ -61,6 +61,10 @@ option, select {
   padding: 0.3em;
 }
 
+code {
+  overflow-wrap: break-word;
+}
+
 a {
   color: blue;
   text-decoration: none;
