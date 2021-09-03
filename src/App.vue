@@ -74,6 +74,15 @@ a:hover {
   text-decoration: underline;
 }
 
+dt {
+  font-family: Courier, monospace;
+  margin-top: 1rem;
+}
+
+dd {
+  margin-left: 2rem;
+}
+
 .utc-time-zone {
   /*background-color: rgba(154, 205, 50, 0.2);*/
   /*background-color: rgba(250, 50, 250, 0.2);*/

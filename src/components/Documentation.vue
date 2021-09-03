@@ -19,6 +19,10 @@
   </p>
 
   <p>
+    There are a total of {{ timeZoneAreaLocationIdentifiers.length }} time zone identifiers that you can choose from.
+  </p>
+
+  <p>
     In the tables, the time zones are sorted on offset values.
   </p>
 
@@ -105,9 +109,17 @@
     The current configuration creates a dynamic link for your convenience. You can bookmark this link for easy access to the values for time zones that you most often use.
   </p>
 
-  <p>
-    Here are some examples.
-  </p>
+  <h3>URL parameters</h3>
+
+  <dl>
+    <dt>tzLocal</dt>
+    <dd>The local time zone identifier.</dd>
+
+    <dt>tz</dt>
+    <dd>A list of additional time zone identifiers.</dd>
+  </dl>
+
+  <h3>Examples</h3>
 
   <p>
     The following shows Perth, London and Los Angeles, with Perth as selected local time zone:
@@ -133,7 +145,7 @@
   <h2>About</h2>
 
   <p>
-    The <em>NNM Meeting time across time zones</em> tool was first created in July 2021.
+    The <em>NNM Meeting time across time zones</em> tool was originally created in July 2021.
   </p>
 
   <p>
@@ -214,6 +226,7 @@
 
 <script setup>
 import {version} from "vue";
+import {timeZoneAreaLocationIdentifiers} from "../timeZones";
 
 </script>
 

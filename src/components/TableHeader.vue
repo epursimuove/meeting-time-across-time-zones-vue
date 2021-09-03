@@ -80,7 +80,7 @@ const offsetInformation = computed(() => {
     color: red;
   }
 
-  80% {
+  30% {
     color: red;
   }
 

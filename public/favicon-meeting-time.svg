@@ -6,77 +6,527 @@
     <!-- First row -->
     <rect x="16"
           y="16"
-          width="160"
-          height="160"
+          width="60"
+          height="60"
           fill="green"
           stroke-width="0"
     />
 
-    <rect x="176"
+    <rect x="76"
           y="16"
-          width="160"
-          height="160"
-          fill="green"
-          stroke-width="0"
-    />
-
-    <rect x="336"
-          y="16"
-          width="160"
-          height="160"
+          width="60"
+          height="60"
           fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="16"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="16"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="16"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="16"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="16"
+          width="60"
+          height="60"
+          fill="red"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="16"
+          width="60"
+          height="60"
+          fill="red"
           stroke-width="0"
     />
 
 
     <!-- Second row -->
     <rect x="16"
-          y="176"
-          width="160"
-          height="160"
+          y="76"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="76"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="76"
+          width="60"
+          height="60"
           fill="yellow"
           stroke-width="0"
     />
 
-    <rect x="176"
-          y="176"
-          width="160"
-          height="160"
-          fill="green"
+    <rect x="196"
+          y="76"
+          width="60"
+          height="60"
+          fill="yellow"
           stroke-width="0"
     />
 
-    <rect x="336"
-          y="176"
-          width="160"
-          height="160"
-          fill="green"
+    <rect x="256"
+          y="76"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="76"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="76"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="76"
+          width="60"
+          height="60"
+          fill="red"
           stroke-width="0"
     />
 
 
     <!-- Third row -->
     <rect x="16"
-          y="336"
-          width="160"
-          height="160"
-          fill="red"
+          y="136"
+          width="60"
+          height="60"
+          fill="green"
           stroke-width="0"
     />
 
-    <rect x="176"
-          y="336"
-          width="160"
-          height="160"
-          fill="red"
+    <rect x="76"
+          y="136"
+          width="60"
+          height="60"
+          fill="green"
           stroke-width="0"
     />
 
-    <rect x="336"
-          y="336"
-          width="160"
-          height="160"
+    <rect x="136"
+          y="136"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="136"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="136"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="136"
+          width="60"
+          height="60"
           fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="136"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="136"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+
+    <!-- Fourth row -->
+    <rect x="16"
+          y="196"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="196"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="196"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="196"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="196"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="196"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="196"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="196"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+
+    <!-- Fifth row -->
+    <rect x="16"
+          y="256"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="256"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="256"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="256"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="256"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="256"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="256"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="256"
+          width="60"
+          height="60"
+          fill="orange"
+          stroke-width="0"
+    />
+
+
+    <!-- Sixth row -->
+    <rect x="16"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="316"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="316"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="316"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+
+    <!-- Seventh row -->
+    <rect x="16"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="376"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="376"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+
+    <!-- Eigth row -->
+    <rect x="16"
+          y="436"
+          width="60"
+          height="60"
+          fill="yellow"
+          stroke-width="0"
+    />
+
+    <rect x="76"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="136"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="196"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="256"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="316"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="376"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
+          stroke-width="0"
+    />
+
+    <rect x="436"
+          y="436"
+          width="60"
+          height="60"
+          fill="green"
           stroke-width="0"
     />
 

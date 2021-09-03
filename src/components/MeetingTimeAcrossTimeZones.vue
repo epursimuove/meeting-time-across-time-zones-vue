@@ -2,7 +2,7 @@
 
   <header>
     <a href="./">
-      <img src="/favicon-meeting-time.svg" alt="Home" width="32" height="32" />
+      <img :src="favicon" alt="Home" width="32" height="32" />
     </a>
     NNM Meeting time across time zones
     <small><var>{{ appVersion }}</var></small>
@@ -59,6 +59,7 @@ import {
   timeZoneAreaLocationIdentifiers,
   exampleSubsetOfTimeZoneAreaLocationIdentifiers
 } from "../timeZones.js";
+import favicon from "/favicon-meeting-time.svg";
 
 Settings.defaultLocale = "en-GB";
 
@@ -140,31 +141,21 @@ const convenienceLink = computed(() => {
   return `${url}${queryParameters}`;
 });
 
-const getQueryParameters = queryString => {
-  const result = {
-    tzLocal: null,
-    tz: []
+const getQueryParameters = location => {
+  const queryParameters = new URL(location).searchParams;
+  const localTimeZone = queryParameters.get("tzLocal");
+  const tzIdentifiers = queryParameters.getAll("tz");
+
+  return {
+    tzLocal: localTimeZone,
+    tz: tzIdentifiers
   };
-
-  queryString
-      .slice(1)
-      .split("&")
-      .forEach(parameter => {
-        const [name, value] = parameter.split("=");
-        if (name === "tzLocal") {
-          result[name] = value;
-        } else if (name === "tz") {
-          result[name].push(value);
-        }
-      });
-
-  return result;
 };
 
 onMounted(() => {
   // console.log('onMounted');
 
-  const queryParameters = getQueryParameters(location.search);
+  const queryParameters = getQueryParameters(location);
 
   const localTimeZoneIdentifierFromUser = queryParameters.tzLocal;
   const additionalTimeZoneIdentifiersFromUser = queryParameters.tz;
