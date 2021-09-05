@@ -1,9 +1,12 @@
 <template>
 
   <header>
-    <a href="./">
-      <img :src="favicon" alt="Home" width="32" height="32" />
-    </a>
+    <div>
+      <a href="./">
+        <img :src="favicon" alt="Favicon for NNM Meeting time across time zones" width="32" height="32" />
+      </a>
+    </div>
+
     NNM Meeting time across time zones
     <small><var>{{ appVersion }}</var></small>
   </header>

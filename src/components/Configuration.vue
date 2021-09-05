@@ -42,7 +42,7 @@
       <input id="local-date"
              type="date"
              :value="currentLocalDate"
-             @input="emit('update:currentLocalDate', $event.target.value)"
+             @input="emitLocalDate"
       />
     </div>
 
@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import {computed, onMounted} from "vue";
+import {computed} from "vue";
 
 const props = defineProps({
   allTimeZones: Array,
@@ -77,7 +77,15 @@ const additionalTimeZoneIdentifiersWrapper = computed({
     // console.log('value', value);
     emit("update:additionalTimeZoneIdentifiers", value);
   }
-})
+});
+
+const emitLocalDate = (event) => {
+  const newLocalDate = event.target.value;
+
+  if (newLocalDate) {
+    emit('update:currentLocalDate', newLocalDate);
+  }
+};
 
 // function emitAllTimeZones() {
 //   emit("allTimeZones", [{id: "UTC"}]); // TODO TESTAR LITE
