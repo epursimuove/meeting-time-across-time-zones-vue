@@ -3,7 +3,7 @@
   <h1>Documentation</h1>
 
   <p>
-    Deciding meeting time across time zones can be a challenging task, and it may be hard to understand how it affects the different participants.
+    Deciding meeting time across time zones can be a <a href="https://anders.nemonisimors.com/timeZones.php">challenging task</a>, and it may be hard to understand how it affects the different participants.
   </p>
 
   <p>
@@ -234,7 +234,9 @@ import {timeZoneAreaLocationIdentifiers} from "../timeZones";
 
 .convenience-indicator {
   display: inline-block;
-  width: 1.5em;
+  width: 1.2em;
+  height: 1.2em;
+  /*vertical-align: text-bottom;*/
 }
 
 </style>
