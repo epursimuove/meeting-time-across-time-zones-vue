@@ -149,7 +149,7 @@
   </p>
 
   <p>
-    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (version <var>2.0.2</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
+    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (version <var>2.1.1</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
   </p>
 
   <p>
