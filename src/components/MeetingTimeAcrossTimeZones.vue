@@ -34,14 +34,18 @@
          :startTime="startTime"
          @hovered-column="handleHoveredColumn"
   />
-
+  
+  <InformationBar
+      :time-zones="actualTimeZones"
+      :startTime="startTime"
+      :columnIndex="hoveredColumnIndex"
+  />
 
   <Summary :timeZones="actualTimeZones"
            :currentLocalTimeZoneIdentifier="localTimeZoneIdentifier"
            :startTime="startTime"
            :columnIndex="hoveredColumnIndex"
   />
-
 
   <Documentation/>
 
@@ -63,6 +67,7 @@ import {
   exampleSubsetOfTimeZoneAreaLocationIdentifiers
 } from "../timeZones.js";
 import favicon from "/favicon-meeting-time.svg";
+import InformationBar from "./InformationBar.vue";
 
 Settings.defaultLocale = "en-GB";
 

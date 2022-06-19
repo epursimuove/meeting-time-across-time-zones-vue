@@ -17,6 +17,10 @@
   <p>
     The <em>summary table</em> displays the decided time slot in a compact format. The most valuable information and the value that should be communicated is probably the "ISO string as Zulu (UTC)".
   </p>
+  
+  <p>
+    The <em>information bar</em> will help you to understand how "good" your current selection is.
+  </p>
 
   <p>
     There are a total of {{ timeZoneAreaLocationIdentifiers.length }} time zone identifiers that you can choose from.
@@ -149,19 +153,22 @@
   </p>
 
   <p>
-    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>2.3.0</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
+    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>2.4.0</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
   </p>
 
   <p>
-    <a href="https://v3.vuejs.org">Vue</a> (version <var>{{ version }}</var>) is used, with its experimental proposal <code>&lt;script setup&gt;</code> functionality.
+    <a href="https://vuejs.org">Vue</a> (version <var>{{ version }}</var>) is used, with its <code>&lt;script setup&gt;</code> functionality.
   </p>
 
   <h3>Changelog</h3>
 
   <ul>
     <li>
-      Version <var>1.1.6</var>, released 2022-02-12.
+      Version <var>1.2.0</var>, released 2022-06-19.
     </li>
+<!--    <li>-->
+<!--      Version <var>1.1.6</var>, released 2022-02-12.-->
+<!--    </li>-->
     <li>
       Version <var>1.1.0</var>, released 2021-08-25.
     </li>
