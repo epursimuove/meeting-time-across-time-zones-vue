@@ -1,18 +1,18 @@
 {
   "name": "meeting-time-across-time-zones-vue",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
-    "luxon": "^3.2.1",
-    "vue": "^3.2.45"
+    "luxon": "^3.3.0",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/compiler-sfc": "^3.2.31",
-    "vite": "^4.0.4"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.4",
+    "vite": "^4.4.6"
   }
 }
