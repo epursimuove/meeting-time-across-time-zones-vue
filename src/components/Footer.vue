@@ -25,13 +25,17 @@ const year = DateTime.now().year;
 <style scoped>
 
 footer {
-  margin-top: 4em;
-  color: darkgray;
+  --color-footer: rgb(200, 200, 200);
+  
+  margin-block-start: 4rem;
+  margin-block-end: 0.5rem;
+  border-block-start: 1px solid var(--color-footer);
+  color: var(--color-footer);
   font-size: 0.9em;
 }
 
 a {
-  color: darkgray;
+  color: var(--color-footer);
 }
 
 </style>
