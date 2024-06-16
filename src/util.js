@@ -1,6 +1,6 @@
 export const appVersion = __APP_VERSION__;
 // export const appName = __APP_NAME__;
-export const releaseDate = "2024-03-17";
+export const releaseDate = "2024-06-16";
 
 const convenienceSlots = {
     red: [21, 22, 23, 0, 1, 2, 3, 4, 5, 6],

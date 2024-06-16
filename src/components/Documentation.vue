@@ -177,12 +177,15 @@
   </p>
 
   <p>
-    <a href="https://vuejs.org">Vue</a> (version <var>{{ version }}</var>) is used, with its <code>&lt;script setup&gt;</code> functionality.
+    <a href="https://vuejs.org">Vue</a> (version <var>{{ version }}</var>) is used.
   </p>
 
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.2.4</var>, released 2024-06-16.
+    </li>
     <li>
       Version <var>1.2.3</var>, released 2024-03-17.
     </li>
