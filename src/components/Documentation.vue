@@ -184,6 +184,9 @@
 
   <ul>
     <li>
+      Version <var>1.2.5</var>, released 2024-07-07.
+    </li>
+    <li>
       Version <var>1.2.4</var>, released 2024-06-16.
     </li>
     <li>
@@ -252,6 +255,10 @@
 
     <li>
       <a href="https://anders.nemonisimors.com/projects/constantTime">Constant time</a>
+    </li>
+
+    <li>
+      <a href="https://anders.nemonisimors.com/projects/temporal">Timestamp magician</a>
     </li>
 
   </ul>
