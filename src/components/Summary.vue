@@ -6,7 +6,7 @@
 
     <p>
       <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO string</a> as <a href="https://anders.nemonisimors.com/currentTime.php">Zulu (UTC)</a>:
-      <span id="isoString" :class="{'in-the-past': inThePast}">{{ actualDateTimeZulu }}</span>
+      <time id="isoString" :class="{'in-the-past': inThePast}">{{ actualDateTimeZulu }}</time>
     </p>
 
     <div id="summary-table">
