@@ -3,7 +3,7 @@
   <h1>Documentation</h1>
 
   <p>
-    Deciding meeting time across time zones can be a <a href="https://anders.nemonisimors.com/timeZones.php">challenging task</a>, and it may be hard to understand how it affects the different participants.
+    Deciding meeting time across time zones can be a <a href="https://anders.nemonisimors.com/timeZones">challenging task</a>, and it may be hard to understand how it affects the different participants.
   </p>
 
   <p>
@@ -31,7 +31,7 @@
   </p>
 
   <p>
-    As always, the <a href="https://anders.nemonisimors.com/currentTime.php">UTC</a> row will never be hidden, since it is so important and valuable.
+    As always, the <a href="https://anders.nemonisimors.com/currentTime">UTC</a> row will never be hidden, since it is so important and valuable.
   </p>
 
   <p>
@@ -79,7 +79,7 @@
     </li>
     <li>
       <span class="utc-time-zone convenience-indicator">&nbsp;</span>
-      The almighty <a href="https://anders.nemonisimors.com/currentTime.php">UTC</a> time zone
+      The almighty <a href="https://anders.nemonisimors.com/currentTime">UTC</a> time zone
     </li>
     <li>
       <span class="hovering convenience-indicator">&nbsp;</span>
@@ -102,7 +102,7 @@
   </p>
 
   <p class="note">
-    Note: If you have an eye for details, you will also notice that you will not be able to select hour 23 under some circumstances, but I will leave that problem as an exercise for you to think about and as a reminder of the <a href="https://anders.nemonisimors.com/timeZones.php#daylight-saving-time">DST craziness</a>.
+    Note: If you have an eye for details, you will also notice that you will not be able to select hour 23 under some circumstances, but I will leave that problem as an exercise for you to think about and as a reminder of the <a href="https://anders.nemonisimors.com/timeZones#daylight-saving-time">DST craziness</a>.
   </p>
 
 
@@ -184,6 +184,9 @@
 
   <ul>
     <li>
+      Version <var>1.2.7</var>, released 2025-02-07.
+    </li>
+    <li>
       Version <var>1.2.6</var>, released 2024-10-05.
     </li>
     <li>
@@ -229,7 +232,7 @@
   <h2>Feedback</h2>
 
   <p>
-    Feedback is always appreciated. If you have questions, suggestions for improvements, find errors, please see the contact details at <a href="https://anders.nemonisimors.com/information.php">information</a> page.
+    Feedback is always appreciated. If you have questions, suggestions for improvements, find errors, please see the contact details at <a href="https://anders.nemonisimors.com/information">information</a> page.
   </p>
 
 
@@ -237,13 +240,13 @@
 
   <ul>
     <li>
-      <a href="https://anders.nemonisimors.com/timeZones.php">Time zones - to be or not to be?</a>, especially the sections:
+      <a href="https://anders.nemonisimors.com/timeZones">Time zones - to be or not to be?</a>, especially the sections:
       <ul>
         <li>
-          <a href="https://anders.nemonisimors.com/timeZones.php#okay-to-call-friend">How can I know if it is okay to call my friend on the other side of the globe?</a>
+          <a href="https://anders.nemonisimors.com/timeZones#okay-to-call-friend">How can I know if it is okay to call my friend on the other side of the globe?</a>
         </li>
         <li>
-          <a href="https://anders.nemonisimors.com/timeZones.php#schedule-meetings-around-the-globe">How can I schedule meetings with participants around the globe?</a>
+          <a href="https://anders.nemonisimors.com/timeZones#schedule-meetings-around-the-globe">How can I schedule meetings with participants around the globe?</a>
         </li>
       </ul>
     </li>
@@ -253,7 +256,7 @@
     </li>
 
     <li>
-      <a href="https://anders.nemonisimors.com/currentTime.php">Current time</a>
+      <a href="https://anders.nemonisimors.com/currentTime">Current time</a>
     </li>
 
     <li>
@@ -271,7 +274,7 @@
   <h2>Disclaimer</h2>
 
   <p>
-    Since we are handling (future) times, dates, time zones, daylight saving times, etc, there may be <a href="https://anders.nemonisimors.com/timeZones.php">confusion and errors</a> involved. In particular, we have the problem that solar noon and noon may be many hours apart in some time zones, the problem with holidays in a particular time zone, local times not fixed to the timeline, areas using offsets of 30 or 45 minutes, the problem with DST switches and other complex edge cases. Therefore, no guarantees are promised and no liabilities for errors.
+    Since we are handling (future) times, dates, time zones, daylight saving times, etc, there may be <a href="https://anders.nemonisimors.com/timeZones">confusion and errors</a> involved. In particular, we have the problem that solar noon and noon may be many hours apart in some time zones, the problem with holidays in a particular time zone, local times not fixed to the timeline, areas using offsets of 30 or 45 minutes, the problem with DST switches and other complex edge cases. Therefore, no guarantees are promised and no liabilities for errors.
   </p>
 
 </template>
