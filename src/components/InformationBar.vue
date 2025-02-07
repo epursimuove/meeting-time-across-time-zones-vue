@@ -12,6 +12,10 @@
     
   </div>
   
+  <div>
+    {{weightedIndicator}}%
+  </div>
+  
 </template>
 
 <script setup>
@@ -56,6 +60,22 @@ const parts = computed(() => {
       count: counts["really-bad"]
     },
   ];
+});
+
+const weightedIndicator = computed(() => {
+  const [good, okay, bad, reallyBad] = parts.value;
+
+  // console.log('good, okay, bad, reallyBad', good, okay, bad, reallyBad);
+  
+  const perfectValue = props.timeZones.length * 5;
+  
+  const weightedValue = good.count * 5 + okay.count * 3 + bad.count * 2 + reallyBad.count * 1;
+
+  // console.log('weightedValue', weightedValue, perfectValue);
+  
+  const percentage = Math.round((weightedValue / perfectValue) * 100);
+  
+  return percentage;
 });
 </script>
 

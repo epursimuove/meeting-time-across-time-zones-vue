@@ -88,6 +88,40 @@
   </ul>
 
 
+  <h2>Information bar</h2>
+  
+  <p>
+    The information bar uses colors to inform about how "good" your selection is.
+  </p>
+  
+  
+  <h3>Weighted indicator</h3>
+  
+  <p>
+    There is also a <em>weighted percentage indicator</em> that can help you in your decision.
+  </p>
+  
+  <p>
+    The weight factors are: 5 for good values, 3 for okay values, 2 for bad values and 1 for really bad values. So, the weighted value formula would be something like <code>5 &times; good + 3 &times; okay + 2 &times; bad + 1 &times; reallyBad</code>.
+  </p>
+  
+  <p>
+    If you have N time zones, a perfect value would be <code>5 &times; N</code>, i.e. all the selected values are good values.
+  </p>
+  
+  <p>
+    The displayed weighted indicator will be the percentage ratio between the weighted value and the perfect value.
+  </p>
+  
+  <p class="note">
+    Note: A value of 100% will be really good to achieve. A value above 60% would probably be okay. A value below 40% would probably be miserable for many.
+  </p>
+
+  <p class="note">
+    Note: UTC is always included in the weighted calculations. This may perhaps be changed in coming versions.
+  </p>
+
+
   <h2>Daylight saving time</h2>
 
   <p>
@@ -183,6 +217,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.3.0</var>, released 2025-02-07.
+    </li>
     <li>
       Version <var>1.2.7</var>, released 2025-02-07.
     </li>
