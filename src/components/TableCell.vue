@@ -138,7 +138,7 @@ const diffMinutePart = computed(() => {
   border-bottom-right-radius: 50%;
 }
 
-.hovering  >>> .table-cell-hour {
+.hovering  :deep(.table-cell-hour) {
   /*font-weight: bold;*/
   color: blueviolet;
 }

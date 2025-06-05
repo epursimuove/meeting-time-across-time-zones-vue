@@ -102,11 +102,11 @@
   </p>
   
   <p>
-    The weight factors are: 5 for good values, 3 for okay values, 2 for bad values and 1 for really bad values. So, the weighted value formula would be something like <code>5 &times; good + 3 &times; okay + 2 &times; bad + 1 &times; reallyBad</code>.
+    The weight factors are: 4 for good values, 2 for okay values, 1 for bad values and 0 for really bad values. So, the weighted value formula would be something like <code>4 &times; good + 2 &times; okay + 1 &times; bad + 0 &times; reallyBad</code>.
   </p>
   
   <p>
-    If you have N time zones, a perfect value would be <code>5 &times; N</code>, i.e. all the selected values are good values.
+    If you have N time zones, a perfect value would be <code>4 &times; N</code>, i.e. all the selected values are good values.
   </p>
   
   <p>
@@ -207,7 +207,7 @@
   </p>
 
   <p>
-    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>3.5.0</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
+    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>3.6.1</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
   </p>
 
   <p>
@@ -217,6 +217,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.4.0</var>, released 2025-06-05.
+    </li>
     <li>
       Version <var>1.3.0</var>, released 2025-02-07.
     </li>

@@ -67,9 +67,9 @@ const weightedIndicator = computed(() => {
 
   // console.log('good, okay, bad, reallyBad', good, okay, bad, reallyBad);
   
-  const perfectValue = props.timeZones.length * 5;
+  const perfectValue = props.timeZones.length * 4;
   
-  const weightedValue = good.count * 5 + okay.count * 3 + bad.count * 2 + reallyBad.count * 1;
+  const weightedValue = good.count * 4 + okay.count * 2 + bad.count * 1 + reallyBad.count * 0;
 
   // console.log('weightedValue', weightedValue, perfectValue);
   
