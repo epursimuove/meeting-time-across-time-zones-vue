@@ -113,6 +113,10 @@
     The displayed weighted indicator will be the percentage ratio between the weighted value and the perfect value.
   </p>
   
+  <p>
+    A potential maximum for the weighted indicator is also displayed. This value is the best that you can achieve among the 24 current hours. Sometimes this can be achieved by several different selections and sometimes only one selection will fulfill this.
+  </p>
+  
   <p class="note">
     Note: A value of 100% will be really good to achieve. A value above 60% would probably be okay. A value below 40% would probably be miserable for many.
   </p>
@@ -207,7 +211,7 @@
   </p>
 
   <p>
-    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>3.6.1</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
+    Ideas came from the upcoming <a href="https://tc39.es/proposal-temporal/docs/">Temporal</a> proposal and especially the section <a href="https://tc39.es/proposal-temporal/docs/cookbook.html#book-a-meeting-across-time-zones">Book a meeting across time zones</a>. Since <em>Temporal</em> was not released in July 2021, <a href="https://moment.github.io/luxon">Luxon</a> (currently version <var>3.7.1</var>) is used instead to handle the otherwise error-prone datetime calculations. When Temporal is released, the underlying code may be refactored.
   </p>
 
   <p>
@@ -217,6 +221,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.5.0</var>, released 2025-08-18.
+    </li>
     <li>
       Version <var>1.4.0</var>, released 2025-06-05.
     </li>

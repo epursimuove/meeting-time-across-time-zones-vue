@@ -12,15 +12,22 @@
     
   </div>
   
-  <div>
+  <div :class="{optimal: weightedIndicator === weightedIndicatorPotentialMaximum}">
     {{weightedIndicator}}%
+  </div>
+  
+  <div class="potential-maximum">
+    {{weightedIndicatorPotentialMaximum}}% <small>(potential maximum)</small>
   </div>
   
 </template>
 
 <script setup>
 import {computed} from "vue";
-import {getConvenienceIndicator} from "../util";
+import {
+  assembleConvenienceIndicators,
+  getConvenienceIndicatorsForTimeZones
+} from "../util";
 import {DateTime} from "luxon";
 
 const props = defineProps({
@@ -31,51 +38,51 @@ const props = defineProps({
 
 const parts = computed(() => {
 
-  const counts = {
-    good: 0,
-    okay: 0,
-    bad: 0,
-    "really-bad": 0,
-  }
+  const convenienceIndicatorsForTimeZones =
+      getConvenienceIndicatorsForTimeZones(props.timeZones, props.startTime, props.columnIndex);
+
+  const assembledConvenienceIndicators = assembleConvenienceIndicators(convenienceIndicatorsForTimeZones);
   
-  props.timeZones
-      .map(timeZone => getConvenienceIndicator(props.startTime.plus({hours: props.columnIndex}).setZone(timeZone.id)))
-      .forEach(convenienceLevel => counts[convenienceLevel]++);
-  
-  return [
-    {
-      css: "good",
-      count: counts.good
-    },
-    {
-      css: "okay",
-      count: counts.okay
-    },
-    {
-      css: "bad",
-      count: counts.bad
-    },
-    {
-      css: "really-bad",
-      count: counts["really-bad"]
-    },
-  ];
+  return assembledConvenienceIndicators;
 });
 
 const weightedIndicator = computed(() => {
-  const [good, okay, bad, reallyBad] = parts.value;
+  
+  return calculatedWeightedIndicator(parts.value);
+});
 
-  // console.log('good, okay, bad, reallyBad', good, okay, bad, reallyBad);
-  
+const calculatedWeightedIndicator = ([good, okay, bad, reallyBad]) => {
   const perfectValue = props.timeZones.length * 4;
-  
+
   const weightedValue = good.count * 4 + okay.count * 2 + bad.count * 1 + reallyBad.count * 0;
 
   // console.log('weightedValue', weightedValue, perfectValue);
-  
+
   const percentage = Math.round((weightedValue / perfectValue) * 100);
-  
+
   return percentage;
+}
+
+const weightedIndicatorPotentialMaximum = computed(() => {
+
+  const calculatedWeightedIndicators = [];
+  for (let i = 0; i < 24; i++) {
+
+    const convenienceIndicatorsForTimeZones =
+        getConvenienceIndicatorsForTimeZones(props.timeZones, props.startTime, i);
+    
+    const assembledConvenienceIndicators = assembleConvenienceIndicators(convenienceIndicatorsForTimeZones);
+
+    calculatedWeightedIndicators.push(calculatedWeightedIndicator(assembledConvenienceIndicators));
+  }
+  
+  //console.table(calculatedWeightedIndicators);
+  
+  //const min = Math.min(...calculatedWeightedIndicators);
+  const max = Math.max(...calculatedWeightedIndicators);
+  //console.log(`Min ${min} - Max ${max}`)
+  
+  return max;
 });
 </script>
 
@@ -86,4 +93,14 @@ const weightedIndicator = computed(() => {
   height: 2rem;
 }
 
+.potential-maximum {
+  color: rgb(150, 150, 150);
+}
+
+.optimal {
+  &::after {
+    color: limegreen;
+    content: "\2713";
+  }
+}
 </style>

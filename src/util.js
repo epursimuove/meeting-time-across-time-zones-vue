@@ -1,6 +1,6 @@
 export const appVersion = __APP_VERSION__;
 // export const appName = __APP_NAME__;
-export const releaseDate = "2025-06-05";
+export const releaseDate = "2025-08-18";
 
 const convenienceSlots = {
     red: [21, 22, 23, 0, 1, 2, 3, 4, 5, 6],
@@ -30,4 +30,42 @@ export const getConvenienceIndicator = hourOfDayDateTime => {
         cssClass = "good";
     }
     return cssClass;
+};
+
+export const getConvenienceIndicatorsForTimeZones =
+    (timeZones, startTime, startTimeOffset) => {
+
+        return timeZones
+            .map(timeZone => getConvenienceIndicator(startTime.plus({hours: startTimeOffset}).setZone(timeZone.id)));
+    };
+
+export const assembleConvenienceIndicators = (convenienceIndicators) => {
+
+    const counts = {
+        good: 0,
+        okay: 0,
+        bad: 0,
+        "really-bad": 0,
+    }
+
+    convenienceIndicators.forEach(convenienceLevel => counts[convenienceLevel]++);
+
+    return [
+        {
+            css: "good",
+            count: counts.good
+        },
+        {
+            css: "okay",
+            count: counts.okay
+        },
+        {
+            css: "bad",
+            count: counts.bad
+        },
+        {
+            css: "really-bad",
+            count: counts["really-bad"]
+        },
+    ];
 };
