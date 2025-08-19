@@ -46,6 +46,15 @@
       />
     </div>
 
+    <div>
+      <label for="include-utc">Include UTC</label>
+      <input id="include-utc"
+             type="checkbox"
+             :checked="includeUtc"
+             @input="emitIncludeUtc"
+      />
+    </div>
+
   </form>
 
 
@@ -59,12 +68,14 @@ const props = defineProps({
   localTimeZoneIdentifier: String,
   additionalTimeZoneIdentifiers: Array,
   currentLocalDate: String,
+  includeUtc: Boolean,
 })
 
 const emit = defineEmits([
   "update:localTimeZoneIdentifier",
   "update:additionalTimeZoneIdentifiers",
   "update:currentLocalDate",
+  "update:includeUtc",
   // "allTimeZones",
 ]);
 
@@ -86,6 +97,12 @@ const emitLocalDate = (event) => {
     emit('update:currentLocalDate', newLocalDate);
   }
 };
+
+const emitIncludeUtc = (event) => {
+  const includeUtc = event.target.checked
+
+  emit('update:includeUtc', includeUtc);
+}
 
 // function emitAllTimeZones() {
 //   emit("allTimeZones", [{id: "UTC"}]); // TODO TESTAR LITE

@@ -15,6 +15,7 @@
                  v-model:localTimeZoneIdentifier="localTimeZoneIdentifier"
                  v-model:additionalTimeZoneIdentifiers="additionalTimeZoneIdentifiers"
                  v-model:currentLocalDate="localDate"
+                 v-model:includeUtc="includeUtc"
   />
 
 <!--  {{ now.toISO() }}-->
@@ -101,6 +102,7 @@ const now = DateTime.now()
 const localTimeZoneIdentifier = ref(null);
 const additionalTimeZoneIdentifiers = ref([]);
 const localDate = ref(now.toISODate());
+const includeUtc = ref(true);
 
 const startTime = computed(() => DateTime
     .fromISO(localDate.value, {zone: localTimeZoneIdentifier.value})
@@ -114,7 +116,7 @@ const allTimeZones = computed(() => timeZones
 // const allTimeZonesTest = ref([]);
 
 const actualTimeZones = computed(() => allTimeZones.value
-    .filter(({id}) => additionalTimeZoneIdentifiers.value.includes(id) || /*localTimeZoneIdentifier.value === id ||*/ id === "UTC")
+    .filter(({id}) => (additionalTimeZoneIdentifiers.value.includes(id) && id !== "UTC") || /*localTimeZoneIdentifier.value === id ||*/ (includeUtc.value && id === "UTC"))
     .sort(compareOffset)
     .reverse());
 
@@ -144,7 +146,9 @@ const convenienceLink = computed(() => {
   const tzLocal = `tzLocal=${localTimeZoneIdentifier.value}`;
   const tz = additionalTimeZoneIdentifiers.value.map(tzId => `tz=${tzId}`);
 
-  const queryParameters = `?${[tzLocal, ...tz].join("&")}`;
+  const queryParameters = includeUtc.value ?
+      `?${[tzLocal, ...tz].join("&")}` :
+      `?${["includeUtc=false", tzLocal, ...tz].join("&")}`;
 
   return `${url}${queryParameters}`;
 });
@@ -153,10 +157,12 @@ const getQueryParameters = location => {
   const queryParameters = new URL(location).searchParams;
   const localTimeZone = queryParameters.get("tzLocal");
   const tzIdentifiers = queryParameters.getAll("tz");
+  const includeUtcQueryParam = queryParameters.get("includeUtc");
 
   return {
     tzLocal: localTimeZone,
-    tz: tzIdentifiers
+    tz: tzIdentifiers,
+    includeUtc: includeUtcQueryParam,
   };
 };
 
@@ -167,6 +173,7 @@ onMounted(() => {
 
   const localTimeZoneIdentifierFromUser = queryParameters.tzLocal;
   const additionalTimeZoneIdentifiersFromUser = queryParameters.tz;
+  const includeUtcFromUser = queryParameters.includeUtc;
 
   if (localTimeZoneIdentifierFromUser) {
     localTimeZoneIdentifier.value = localTimeZoneIdentifierFromUser;
@@ -178,6 +185,10 @@ onMounted(() => {
     additionalTimeZoneIdentifiers.value = additionalTimeZoneIdentifiersFromUser;
   } else {
     additionalTimeZoneIdentifiers.value = [...defaultTimeZones, now.zoneName];
+  }
+  
+  if (includeUtcFromUser && includeUtcFromUser === "false") {
+    includeUtc.value = false;
   }
 })
 

@@ -30,8 +30,14 @@
     In the tables, the time zones are sorted on offset values.
   </p>
 
+<!--
   <p>
     As always, the <a href="https://anders.nemonisimors.com/currentTime">UTC</a> row will never be hidden, since it is so important and valuable.
+  </p>
+-->
+
+  <p>
+    The <a href="https://anders.nemonisimors.com/currentTime">UTC</a> row can be hidden, by toggling the <em>Include UTC</em> checkbox.
   </p>
 
   <p>
@@ -114,7 +120,7 @@
   </p>
   
   <p>
-    A potential maximum for the weighted indicator is also displayed. This value is the best that you can achieve among the 24 current hours. Sometimes this can be achieved by several different selections and sometimes only one selection will fulfill this.
+    A potential maximum for the weighted indicator is also displayed. This value is the best that you can achieve among the 24 slots. Sometimes this can be achieved by several different selections and sometimes only one selection will fulfill this.
   </p>
   
   <p class="note">
@@ -122,7 +128,7 @@
   </p>
 
   <p class="note">
-    Note: UTC is always included in the weighted calculations. This may perhaps be changed in coming versions.
+    Note: UTC is included in the weighted calculations if it is among the listed time zones.
   </p>
 
 
@@ -159,6 +165,9 @@
 
     <dt>tz</dt>
     <dd>A list of additional time zone identifiers.</dd>
+
+    <dt>includeUtc</dt>
+    <dd>Boolean indicating if UTC should be included among the time zones. Default value is <code>true</code>.</dd>
   </dl>
 
   <h3>Examples</h3>
@@ -170,6 +179,16 @@
   <a href="https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth">
     <code>
       https://anders.nemonisimors.com/projects/meetingTime/?tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth
+    </code>
+  </a>
+
+  <p>
+    The same as above, but excluding the UTC time zone:
+  </p>
+
+  <a href="https://anders.nemonisimors.com/projects/meetingTime/?includeUtc=false&tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth">
+    <code>
+      https://anders.nemonisimors.com/projects/meetingTime/?includeUtc=false&tzLocal=Australia/Perth&tz=Europe/London&tz=America/Los_Angeles&tz=Australia/Perth
     </code>
   </a>
 
@@ -203,6 +222,16 @@
     </code>
   </a>
 
+  <p>
+    The same as above, but excluding the UTC time zone:
+  </p>
+
+  <a href="https://anders.nemonisimors.com/projects/meetingTime/?includeUtc=false&tzLocal=Europe/Stockholm&tz=America/Denver&tz=Europe/Stockholm">
+    <code>
+      https://anders.nemonisimors.com/projects/meetingTime/?includeUtc=false&tzLocal=Europe/Stockholm&tz=America/Denver&tz=Europe/Stockholm
+    </code>
+  </a>
+
 
   <h2>About</h2>
 
@@ -221,6 +250,9 @@
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.6.0</var>, released 2025-08-19.
+    </li>
     <li>
       Version <var>1.5.0</var>, released 2025-08-18.
     </li>
@@ -294,6 +326,9 @@
         </li>
         <li>
           <a href="https://anders.nemonisimors.com/timeZones#schedule-meetings-around-the-globe">How can I schedule meetings with participants around the globe?</a>
+        </li>
+        <li>
+          <a href="https://anders.nemonisimors.com/timeZones#times-and-dates-in-the-future">Times and dates in the future</a>
         </li>
       </ul>
     </li>
