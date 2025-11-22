@@ -251,6 +251,9 @@
 
   <ul>
     <li>
+      Version <var>1.6.1</var>, released 2025-08-20.
+    </li>
+    <li>
       Version <var>1.6.0</var>, released 2025-08-19.
     </li>
     <li>

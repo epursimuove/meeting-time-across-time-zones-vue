@@ -12,12 +12,12 @@
     
   </div>
   
-  <div :class="{optimal: weightedIndicator === weightedIndicatorPotentialMaximum}">
-    {{weightedIndicator}}%
+  <div class="weighted-indicator" :class="{optimal: weightedIndicator === weightedIndicatorPotentialMaximum}">
+    {{weightedIndicator.toString().padStart(3)}}%
   </div>
   
   <div class="potential-maximum">
-    {{weightedIndicatorPotentialMaximum}}% <small>(potential maximum)</small>
+    {{weightedIndicatorPotentialMaximum.toString().padStart(3)}}% <small>(potential maximum)</small>
   </div>
   
 </template>
@@ -93,12 +93,18 @@ const weightedIndicatorPotentialMaximum = computed(() => {
   height: 2rem;
 }
 
+.weighted-indicator, .potential-maximum {
+  font-family: Courier, monospace;
+  white-space: pre;
+}
+
 .potential-maximum {
   color: rgb(150, 150, 150);
 }
 
 .optimal {
   &::after {
+    font-size: 0.85rem;
     color: limegreen;
     content: "\2713";
   }
