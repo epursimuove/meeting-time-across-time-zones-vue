@@ -246,10 +246,17 @@
   <p>
     <a href="https://vuejs.org">Vue</a> (version <var>{{ version }}</var>) is used.
   </p>
+  
+  <p>
+    Source code available at <a href="https://github.com/epursimuove/meeting-time-across-time-zones-vue">GitHub</a>.
+  </p>
 
   <h3>Changelog</h3>
 
   <ul>
+    <li>
+      Version <var>1.6.3</var>, released 2026-05-10.
+    </li>
     <li>
       Version <var>1.6.2</var>, released 2025-11-23.
     </li>

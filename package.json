@@ -1,6 +1,6 @@
 {
   "name": "meeting-time-across-time-zones-vue",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "author": {
     "name": "Anders Gustafson",
     "url": "https://anders.nemonisimors.com"
@@ -12,12 +12,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "luxon": "^3.4.4",
-    "vue": "^3.4.21"
+    "luxon": "^3.7.2",
+    "vue": "^3.5.34"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
-    "@vue/compiler-sfc": "^3.3.4",
-    "vite": "^7.1.2"
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/compiler-sfc": "^3.5.34",
+    "vite": "^8.0.11"
   }
 }
